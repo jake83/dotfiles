@@ -14,7 +14,7 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, nixpkgs }: {
+  outputs = inputs@{ self, nix-darwin, nix-homebrew, home-manager, nixpkgs }: {
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       modules = [
         ./configuration.nix

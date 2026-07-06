@@ -43,7 +43,6 @@
       "k6"
       "mailpit"
       "mysql-client"
-      "neovim"
       "node"
       "php"
       "python@3.12"
