@@ -74,3 +74,25 @@
 2026-07-06T20:47:26.257139Z  INFO herdr::server::headless: client disconnected client_id=8
 2026-07-06T20:47:28.787986Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jwatson/.config/herdr/session.json workspaces=1
 2026-07-06T21:06:16.112516Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-06T21:23:20.580962Z  INFO herdr::server::headless: client connected client_id=10 cols=133 rows=45 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-07-06T21:23:47.063946Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-06T21:23:51.093721Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-07-06T21:23:56.118824Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jwatson/.config/herdr/session.json workspaces=1
+2026-07-06T21:24:18.629999Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=6 status="ExitStatus { code: 0, signal: None }"
+2026-07-06T21:24:18.630179Z  INFO herdr::pane: pane session terminated pane=6 pid=60366 signal=Hangup
+2026-07-06T21:24:23.638885Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jwatson/.config/herdr/session.json workspaces=1
+2026-07-06T21:24:38.933645Z  INFO herdr::pane: agent changed pane=2 previous_agent=Some(Claude) agent=None pgid=Some(58899)
+2026-07-06T21:27:07.958391Z  INFO herdr::app::actions: copied selection to clipboard
+2026-07-06T21:27:33.066020Z  INFO herdr::app::actions: copied selection to clipboard
+2026-07-06T21:27:33.588034Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jwatson/.config/herdr/session.json workspaces=1
+2026-07-06T21:28:46.387238Z  INFO herdr::app::actions: copied selection to clipboard
+2026-07-06T21:29:23.071344Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 0, signal: None }"
+2026-07-06T21:29:23.071465Z  INFO herdr::pane: pane session terminated pane=2 pid=58899 signal=Hangup
+2026-07-06T21:29:27.378548Z  INFO herdr::server::headless: client detach requested via keybind client_id=10
+2026-07-06T21:29:27.380604Z  INFO herdr::server::headless: client disconnected client_id=10
+2026-07-06T21:29:28.083500Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jwatson/.config/herdr/session.json workspaces=1
+2026-07-06T21:36:16.088150Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-06T23:28:02.505973Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T03:33:10.600415Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T05:30:35.384787Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T07:27:22.992802Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"

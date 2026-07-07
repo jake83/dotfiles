@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
@@ -18,9 +18,14 @@ in
     neovim
     # the font everything renders in
     nerd-fonts.hack
+  ] ++ [
+    inputs.treehouse.packages.${pkgs.system}.default
   ];
   fonts.fontconfig.enable = true;
-  home.sessionVariables.EDITOR = "nvim";
+  home.sessionVariables = {
+    EDITOR = "nvim";  # you likely already have this — just merge NPM_CONFIG_PREFIX in
+    NPM_CONFIG_PREFIX = "${config.home.homeDirectory}/.npm-global";
+  };
 
   programs.zsh = {
     enable = true;
@@ -58,7 +63,6 @@ in
     };
   };
 
-
   # Edit-in-place: the real file stays in my repo, ~/.config just points at it.
   home.file.".config/wezterm".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/wezterm";
@@ -75,4 +79,13 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
   home.file.".config/opencode/AGENTS.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.npm-global/bin"
+  ];
+
+  home.activation.installNpmGlobals = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p "${config.home.homeDirectory}/.npm-global"
+    PATH="${pkgs.nodejs}/bin:$PATH" NPM_CONFIG_PREFIX="${config.home.homeDirectory}/.npm-global" $DRY_RUN_CMD ${pkgs.nodejs}/bin/npm install -g intelephense prettier tree-sitter-cli
+  '';
 }

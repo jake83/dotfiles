@@ -24,3 +24,9 @@
 2026-07-06T20:45:48.296005Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
 2026-07-06T20:45:48.296176Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
 2026-07-06T20:47:26.255810Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=60323
+2026-07-06T21:23:20.407179Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=62966
+2026-07-06T21:23:20.407533Z  INFO herdr::client: connecting to server path=/Users/jwatson/.config/herdr/herdr-client.sock
+2026-07-06T21:23:20.580911Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-07-06T21:23:47.063632Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-06T21:23:47.063802Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-06T21:29:27.378937Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=62966
