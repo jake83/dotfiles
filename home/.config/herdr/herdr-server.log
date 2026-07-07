@@ -99,3 +99,7 @@
 2026-07-07T07:57:22.928376Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
 2026-07-07T08:27:22.900301Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
 2026-07-07T08:57:22.876424Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T09:27:25.015933Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T09:57:25.025455Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T10:27:25.062621Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-07T10:57:25.080095Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
