@@ -10,4 +10,8 @@ config.macos_window_background_blur = 50
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 
+-- Start a login shell so ~/.zprofile is sourced (loads ATLASSIAN_* creds etc).
+-- WezTerm doesn't do this by default; macOS Terminal does.
+config.default_prog = { os.getenv("SHELL") or "/bin/zsh", "-l" }
+
 return config
