@@ -86,6 +86,6 @@ in
 
   home.activation.installNpmGlobals = lib.hm.dag.entryAfter ["writeBoundary"] ''
     mkdir -p "${config.home.homeDirectory}/.npm-global"
-    PATH="${pkgs.nodejs}/bin:$PATH" NPM_CONFIG_PREFIX="${config.home.homeDirectory}/.npm-global" $DRY_RUN_CMD ${pkgs.nodejs}/bin/npm install -g intelephense prettier tree-sitter-cli
+    PATH="${pkgs.nodejs}/bin:$PATH" NPM_CONFIG_PREFIX="${config.home.homeDirectory}/.npm-global" $DRY_RUN_CMD ${pkgs.nodejs}/bin/npm install -g intelephense typescript pyright prettier tree-sitter-cli
   '';
 }
