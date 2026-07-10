@@ -2,7 +2,10 @@ return {
   {
     'saghen/blink.cmp',
     version = '1.*',
-    opts = {},
+    opts = {
+      -- show the parameter popup automatically while typing a call
+      signature = { enabled = true },
+    },
   },
   {
     'neovim/nvim-lspconfig',
