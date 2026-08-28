@@ -1,1 +1,5 @@
-{}
+{
+  "model": "opus[1m]",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
+}
