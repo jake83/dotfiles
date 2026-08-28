@@ -44,6 +44,8 @@ These can't be captured declaratively and need doing once per machine:
 - `home.activation.installNpmGlobals` installs `intelephense`, `prettier`, `tree-sitter-cli` globally via npm into `~/.npm-global` on every rebuild — not managed by Nix directly since they're not (yet) packaged in nixpkgs.
 - If WezTerm/zsh/Claude config files pre-exist on a machine, `home-manager.backupFileExtension = "backup"` will rename conflicts to `.backup` rather than failing the build.
 - After any rebuild that touches PATH or session variables, fully quit and relaunch WezTerm (Cmd+Q) rather than opening a new tab — a stale shell can hold onto old environment state (`__HM_SESS_VARS_SOURCED` guard) and skip re-sourcing.
+- **Backgrounds are solid, not transparent.** WezTerm, Neovim and herdr all paint the same opaque palette so panes don't visually seam: `#191A1C` for the main background, `#141516` for panels/tab bar/floats, `#3A3A3A` for inputs and overlays. These are the values Junie's TUI hard-codes (it has no transparent theme, so matching it was the only way to keep every pane consistent). If you change one, change all four places: `home/.config/wezterm/wezterm.lua`, `wezterm/wezterm.lua`, `home/.config/nvim/lua/plugins/ui.lua` (rose-pine `palette.moon` override) and `home/.config/herdr/config.toml` (`[theme.custom]`).
+- herdr keeps its logs, sockets and session state in the same directory as its config, so `.gitignore` excludes everything under `home/.config/herdr/` except `config.toml`. Reload it live with `herdr server reload-config`; it silently ignores unknown theme keys, so check the output says `status: applied` with no diagnostics.
 
 ## Troubleshooting
 

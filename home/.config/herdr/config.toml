@@ -1,0 +1,9 @@
+# herdr configuration
+# Colour tokens only - keybindings stay on herdr's defaults.
+
+# Junie's dark palette, so the sidebar matches wezterm and nvim.
+[theme.custom]
+panel_bg = "#191A1C"
+surface0 = "#141516"
+surface1 = "#3A3A3A"
+surface_dim = "#141516"

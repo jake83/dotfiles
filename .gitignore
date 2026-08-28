@@ -1,2 +1,4 @@
-home/.config/herdr/*.log
-home/.config/herdr/session.json
+# herdr writes its runtime state (logs, sockets, sessions, release notes) into the
+# same directory as its config, so track config.toml only.
+home/.config/herdr/*
+!home/.config/herdr/config.toml

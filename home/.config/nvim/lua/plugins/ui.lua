@@ -11,8 +11,13 @@ return {
     config = function()
       require('rose-pine').setup({
         variant = 'moon',
-        styles = {
-          transparency = true, -- let wezterm's opacity/blur show through
+        palette = {
+          -- Junie's dark greys, matching wezterm's background.
+          moon = {
+            base = '#191A1C',
+            surface = '#141516',
+            overlay = '#3A3A3A',
+          },
         },
       })
       vim.cmd.colorscheme('rose-pine')
