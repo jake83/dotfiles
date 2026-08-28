@@ -16,6 +16,7 @@ in
     jq        # json on the command line
     lazygit
     neovim
+    uv        # python project/package manager (nimbleship api)
     # the font everything renders in
     nerd-fonts.hack
   ] ++ [
