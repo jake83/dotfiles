@@ -73,6 +73,10 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr";
   home.file.".claude/settings.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/settings.json";
+  # Junie: config.json only. Junie rewrites ~/.junie/settings.json on every launch
+  # and keeps logs/sessions/sockets in that dir, so never symlink the whole thing.
+  home.file.".junie/config.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.junie/config.json";
 
   home.file.".claude/CLAUDE.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
