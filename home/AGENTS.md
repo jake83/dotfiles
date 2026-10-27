@@ -13,3 +13,6 @@
   If you see one, even if it is not caused by what you are working on right now, still get it fixed.
 - Explore with a subagent first, don't read the directory into this session.
 - Don't re-read files you've already read unless something changed them.
+- When a task ends in a PR, stop once the PR is open and CI is green (`gh pr checks <n> --watch`). Don't triage CodeRabbit or other review comments - that happens in a fresh session.
+  Before stopping, add the decisions a reviewer would question to the PR body, with the reasoning. The review session will have no other memory of them.
+  End with the next step as copy-paste lines: `/clear`, then `/superpowers:receiving-code-review <PR URL>`.
