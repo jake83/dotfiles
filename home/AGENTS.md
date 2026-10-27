@@ -11,3 +11,5 @@
   If something clearly looks off, even if it is not directly related to what you are doing, try to get it fixed along the way.
 - Apply that same high standard to engineering excellence: lint, test failures, and test flakiness.
   If you see one, even if it is not caused by what you are working on right now, still get it fixed.
+- Explore with a subagent first, don't read the directory into this session.
+- Don't re-read files you've already read unless something changed them.
